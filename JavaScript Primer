@@ -1,0 +1,111 @@
+//COMMENTS
+// Comment until the end of the line
+/* 
+ *  Comment block
+ */
+
+//VARIABLES
+var myVar;
+//Use the comma operator to declare multiple variables in a single declaration e.g.
+var x, y;
+
+
+//VARIABLE ASSIGNMENT
+console.log("Variable Assignment In JavaScript");
+var myVar = 0;
+myVar = myVar + 1;
+console.log(myVar);
+console.log('');
+console.log("Types In JavaScript");
+var myInt = 0;
+var myFloat = 2.5;
+var myBoolean = true;
+var myString = "This is a string";
+var myArray = [1,2,3];
+var myJSONObject = {
+    myField : "Some value"
+};
+// Object instantiation using new
+var myDate = new Date();
+console.log(myInt);
+console.log(myFloat);
+console.log(myBoolean);
+console.log(myString);
+console.log(myArray);
+console.log(myJSONObject);
+console.log(myDate);
+
+//NUMERIC OPERATORS
+console.log('');
+console.log("Numeric operators include + (addition) - (subtraction) / (division) * (multiplication) % (modulo)");
+var x = 4;
+x = x + 1; // x is 5
+y = x % 2; // y is 1
+x++; // x is 6
+x--; // x is 5
+x += 3; // x is 8
+var aString = "The value of x is " + x;
+console.log(aString);
+
+//MATH
+console.log('');
+console.log('Math Functions');
+var floor = Math.floor(myInt);
+var ceiling = Math.ceil(myInt);
+var min = Math.min(x, y);
+var rand = Math.random(); // random number between 0 and up to but not equal to 1
+var pi = Math.PI;
+var output = 'floor='+floor+' ceiling='+ceiling+' min='+min+' rand='+rand+' pi='+pi;
+console.log(output);
+
+//CONDITIONAL BEHAVIOR
+console.log('');
+console.log('Conditional Behavior if else');
+if (x > 0) {
+    console.log('x is greater than 0');
+} else {
+    console.log('x is not greater than 0');
+}
+
+//LOOPS
+console.log('');
+console.log('For Loop');
+for (var i = 0; i < myArray.length; i++) {
+    console.log(myArray[i]);
+}
+console.log('While Loop');
+while (x < 10) {
+    console.log(x++);
+}
+
+//FUNCTIONS
+console.log('');
+console.log('Functions')
+function myIncrementFunction (x) {
+    return x + 1;
+}
+//CALLING FUNCTIONS
+z = myIncrementFunction(1000);
+console.log(z);
+
+//EXCEPTION HANDLING
+console.log('');
+try {
+  //  var five = require("johnny-five");
+} catch (e) {
+    console.log('got this error: '+e.description);
+} finally {
+    // this block is executed regardless of whether there was an exception
+}
+
+//REQUIRE
+//Include a library in a node.js program
+//var five = require("johnny-five");
+//var myLib = require("some-other-lib");
+
+//HANDLING EVENTS
+//Use on to attach a callback function that will be executed whenever the event occurs:
+//var myBoard = new five.Board();
+//myBoard.on("ready", function() {
+    // code to be executed when the board is ready
+//});
