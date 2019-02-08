@@ -115,13 +115,28 @@ try {
 //});
 
 //TEXT-TO-SPEECH
-var msg = new SpeechSynthesisUtterance('good job');
-window.speechSynthesis.speak(msg);
+function say(m) {
+  var msg = new SpeechSynthesisUtterance(m);
+  speechSynthesis.speak(msg);
+}
 
 //HACKS
-var x = document.createElement('script');
-x.src = 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js';
-document.getElementsByTagName("head")[0].appendChild(x);
+//PROCESSING https://processing.org/
+loadProcessing()
+function setup() {
+  createCanvas(375, 492);
+  text('hello world', 100, 200);
+}
+function draw() {
+  fill(255);
+  ellipse(mouseX, mouseY, 80, 80);
+}
+function loadProcessing(){
+  var x = document.createElement('script');
+  x.src = 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js';
+  document.getElementsByTagName("head")[0].appendChild(x);
+}
+
 
 
 
